@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.yo.interfaces4.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".33"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+        <Button
+            android:id="@+id/botonFondo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fondo rojo"
+            android:onClick="cambiarFondo"/>
+
+        <Button
+            android:id="@+id/botonLetras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="letras rojas"
+            android:onClick="cambiarLetras"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight=".1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/checkMostrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar"
+                android:onClick="checkBox"/>
+            <TextView
+                android:id="@+id/textoMostrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible"
+                android:text="Un texto que se esconde y se muestra"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/clickLargo"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Haz un click largo aquí"
+        android:clickable="true"
+        />
+    <LinearLayout
+        android:id="@+id/layoutFondo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".33"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:background="#ffffff">
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:numStars="5"
+            />
+        <TextView
+            android:id="@+id/textoRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="[0/5]"/>
+    </LinearLayout>
+</LinearLayout>
